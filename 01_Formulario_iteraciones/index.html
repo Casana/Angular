@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="keywords" content="web, learning, html5, css3, angularJS">
+    <meta name="author" content="Alejandro">
+    <meta name="description" content="Ejercicios de JS">
+    <meta name="generator" content="Visual Studio Code">
+    <meta charset="UTF-8">
+    <title>Formulario de saludo</title>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="icon" href="fav_icon.png">
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<!-- Iniciamos APP// Inicializamos variables de Scope
+ANTIPATRON que no se debe utilizar (ng-init) -->
+
+<body ng-app ng-init="sCurso = 'Curso Angular'; sNombre = 'Pepe Pezez'; aProducto =[]">
+    <header>
+        <h1>Lista de la compra con Angular</h1>
+    </header>
+    <article>
+        <form name="formulario">
+            <label for="sNombre">Indica tu nombre</label>
+            <!-- Asociamos el input a una variable del Modelo -->
+            <input type="text" id="sNombre" ng-model="sNombre">
+            <input type="text" id="aProducto" ng-model="aProducto">
+            <label></label>
+            <!-- Asociamos una operación con el evento click -->
+            <input type="button" value="Añadir Producto" ng-click=aProducto.push(text)>
+        </form>
+
+        <!-- Presentamos mediante expresiones los valores de variables del scope -->
+        <p>Hola <span class="destacado">{{sNombre.toUpperCase()}}</span>.</p>
+        <p>Bienvenid@ al curso de <strong class="destacado">{{sCurso}}</strong>.</p>
+
+
+    </article>
+    <footer>
+        <p>Carlos Martinez - Madrid 2017</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "angularjs",
+  "version": "1.0.0",
+  "description": "Ejercicios de AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Casana/Angular.git"
+  },
+  "keywords": [
+    "Angular"
+  ],
+  "author": "Carlos Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Casana/Angular/issues"
+  },
+  "homepage": "https://github.com/Casana/Angular#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angularjs": "0.0.1"
+  }
+}
