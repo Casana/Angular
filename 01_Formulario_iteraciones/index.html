@@ -15,7 +15,7 @@
 <!-- Iniciamos APP// Inicializamos variables de Scope
 ANTIPATRON que no se debe utilizar (ng-init) -->
 
-<body ng-app ng-init="sCurso = 'Curso Angular'; sNombre = 'Pepe Pezez'; aProducto =[]">
+<body ng-app ng-init="nombre = 'Pepe Pezez'; aProducto =[]">
     <header>
         <h1>Lista de la compra con Angular</h1>
     </header>
@@ -23,7 +23,8 @@ ANTIPATRON que no se debe utilizar (ng-init) -->
         <form name="formulario">
             <label for="sNombre">Indica tu nombre</label>
             <!-- Asociamos el input a una variable del Modelo -->
-            <input type="text" id="sNombre" ng-model="sNombre">
+            <input type="text" id="sNombre" ng-model="nombre">
+            <label for0 "fProducto" id="lblProducto"> Añade un producto 
             <input type="text" id="aProducto" ng-model="aProducto">
             <label></label>
             <!-- Asociamos una operación con el evento click -->
@@ -32,7 +33,11 @@ ANTIPATRON que no se debe utilizar (ng-init) -->
 
         <!-- Presentamos mediante expresiones los valores de variables del scope -->
         <p>Hola <span class="destacado">{{sNombre.toUpperCase()}}</span>.</p>
-        <p>Bienvenid@ al curso de <strong class="destacado">{{sCurso}}</strong>.</p>
+        <h2> Esta es tu lista de la compra </h2>
+        <ul>
+            <li ng-repeat="producto in aProducto track by $index">
+                Tu producto numero {{$index + 1}} es <q> {{pensamiento}} </q></li>
+        </ul>
 
 
     </article>

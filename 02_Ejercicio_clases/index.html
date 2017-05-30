@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="keywords" content="web, learning, html5, css3, angularJS">
+    <meta name="author" content="Carlos">
+    <meta name="description" content="Acumulador con clases en Angular ">
+    <meta name="generator" content="Visual Studio Code">
+    <meta charset="UTF-8">
+    <title>Acumulador Angular</title>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="icon" href="fav_icon.png">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body ng-app="miAplicacion" ng-controller="AppController as $ctrl">
+
+    <header>
+        <h1>Acumulador</h1>
+    </header>
+    <article>
+        <form name="formulario">
+            <label for="sNombre">Incremento:</label>
+            <input type="text" name="sNumero" ng-model="$ctrl.numero">
+            <input type="button" id="btnsuma" value="+" ng-click="$ctrl.botonSuma()">
+            <input type="button" id="btnresta" value="-" ng-click="$ctrl.botonResta()">
+        </form>
+
+        <h2> Totales: </h2>
+        <p> En el acumulador llevamos un total de:
+            <b ng-class="{positivo: $ctrl.resultado>=0, negativo: $ctrl.resultado<0}">{{ $ctrl.resultado }} </b></p>
+
+    </article>
+    <footer>
+        <p>Carlos Martinez - Madrid 2017</p>
+    </footer>
+</body>
+
+</html>
